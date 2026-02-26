@@ -1,0 +1,56 @@
+
+[bar]
+size = 32
+background_color = "#1d1d1d"
+border_radius = 35
+background_opacity = 1
+screen_margin = 0
+popover_offset = 15
+inset = 2
+spacing = 0
+padding = 2
+
+[widgets]
+left = ["workspaces","window_title"]
+center = ["clock"]
+right = [
+  "notifications",
+  "quick_settings",
+  "battery"
+]
+background_color = "#1d1d1d"
+border_radius = 40
+background_opacity = 1
+
+# Per-widget options use [widgets.<name>] sections.
+# Example:_
+[widgets.clock]
+format = "%d %a -- %H:%M"
+
+[widgets.quick_settings]
+vpn = false
+#
+# See documentation for all widget options.
+
+[theme]
+mode = "dark"
+accent = "#3584e4"
+
+[theme.icons]
+theme = "gtk" # "material" or "gtk"
+weight = 100      # Material icon stroke weight (100-700)
+
+[osd]
+enabled = true
+position = "bottom"
+
+[theme.typography]
+font_family = "Adwaita Sans Regular"
+
+[advanced]
+compositor = "auto"
+pango_font_rendering = true
+
+# Custom CSS: place style.css in same directory as this file.
+# See documentation for available CSS variables and classes.
+

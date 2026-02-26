@@ -1,0 +1,43 @@
+
+.bar {
+    margin: 7px 200px 0px 200px
+   }
+
+.clock-label {
+    font-size: 16px;
+    font-family: "JetBrains Mono";
+    color: white;
+}
+.notification-popover {
+    border-radius: 20px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 20px 10px 20px;
+}
+.battery-icon {
+    
+    }
+.battery-charging {
+    color: green;
+}
+.battery-low {
+    color: red;
+}
+.battery-popover {
+    border-radius: 20px;
+    padding: 15px 20px 15px 20px;
+}
+.clock-popover {
+    border-radius: 20px;
+    background-color: #1d1d1d;
+}
+.battery-percentage {
+    font-size: 15px;
+}
+.quick-settings-popover {
+    border-radius: 20px;
+    margin: 0px 0px 0px 0px;
+    padding: 15px 15px 15px 15px;
+}
+.battery-popover-profile-button {
+    
+}
