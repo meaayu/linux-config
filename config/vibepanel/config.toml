@@ -1,56 +1,49 @@
 
 [bar]
-size = 32
-background_color = "#1d1d1d"
-border_radius = 35
-background_opacity = 1
-screen_margin = 0
-popover_offset = 15
-inset = 2
-spacing = 0
-padding = 2
+position = "bottom" # "top" or "bottom"
+spacing = 8
+size = 35
+popover_offset = 20
+background_opacity = 1.0
 
 [widgets]
-left = ["workspaces","window_title"]
+left = ["workspaces", "window_title"]
 center = ["clock"]
 right = [
+  "tray",
   "notifications",
   "quick_settings",
-  "battery"
+  "battery",
+  "custom-power",
 ]
-background_color = "#1d1d1d"
 border_radius = 40
-background_opacity = 1
-
-# Per-widget options use [widgets.<name>] sections.
-# Example:_
-[widgets.clock]
-format = "%d %a -- %H:%M"
+background_opacity = 1.0
+background_color = "#181616"
 
 [widgets.quick_settings]
 vpn = false
-#
-# See documentation for all widget options.
+updates = false
+
+[widgets.custom-power]
+icon = "system-shutdown-symbolic"
+label = ""
+tooltip = "Power menu"
+on_click = "anyrun"
+on_click_right = ""
 
 [theme]
-mode = "dark"
-accent = "#3584e4"
+mode = "gtk" # "auto", "dark", "light", "gtk"
 
 [theme.icons]
 theme = "gtk" # "material" or "gtk"
-weight = 100      # Material icon stroke weight (100-700)
+weight = 400       # Material icon stroke weight (100-700)
 
 [osd]
 enabled = true
-position = "bottom"
-
-[theme.typography]
-font_family = "Adwaita Sans Regular"
+position = "bottom" # "bottom", "top", "left", "right"
 
 [advanced]
-compositor = "auto"
-pango_font_rendering = true
+compositor = "auto"  # "auto", "hyprland", "niri", "mango"
 
 # Custom CSS: place style.css in same directory as this file.
 # See documentation for available CSS variables and classes.
-
