@@ -17,21 +17,24 @@ input {
     }
 }
 
+workspace "1"
+workspace "2"
+
 
 output "eDP-1" { 
     mode "1920x1080"
-    scale 1.3
+    scale 1.23
     position x=0 y=0
      hot-corners {
-        off
-        // top-right
+        
+         top-right
         // bottom-left
         // bottom-right
     }
 }
 
 layout {
-    gaps 20
+    gaps 13
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -43,10 +46,8 @@ layout {
     default-column-width { proportion 0.5; }
     
     focus-ring {
-     
         width 2
-        active-color "#dededa"
-        inactive-color "#505050"
+        active-color "#E7BB5C"
     }
 
     border {
@@ -57,74 +58,47 @@ layout {
     shadow {
         off
     }
- 
+ }
+ window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
 }
-spawn-at-startup "swayidle" "-w" \
-    "timeout" "100" "swaylock -f -c 000000" \
-    "timeout" "150" "niri msg action power-off-monitors" \
-    "resume" "niri msg action power-on-monitors" \
-    "before-sleep" "swaylock -f -c 000000"
-spawn-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=GNOME"
-spawn-at-startup "vibepanel"
-spawn-at-startup "swaybg" "-i" "/home/aayu/Pictures/wallpapers/green.jpg" "-m" "fill"
 
-prefer-no-csd
+layer-rule {
+    match namespace="waybar"
+    opacity 0.99
+}
+
+window-rule {
+    match is-active=false
+    opacity 1.0
+}
+
+spawn-at-startup "vibepanel"
+spawn-at-startup "waypaper" "--restore"
+
+// == prefer-no-csd
 
 hotkey-overlay {
     skip-at-startup
 }
-
+prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    workspace-switch {
-        spring damping-ratio=0.80 stiffness=800 epsilon=0.01
-    }
-    horizontal-view-movement {
-        spring damping-ratio=0.85 stiffness=800 epsilon=0.01
-    }
-    window-movement {
-        spring damping-ratio=0.75 stiffness=800 epsilon=0.01
-    }
-   
+    off
 }
 
-window-rule {
-    match app-id="org.gnome.Portal"
-    match app-id="xdg-desktop-portal-gnome"
-    match title="Open Folder"
-    match title="Open File"
-    open-floating true
-    focus-ring { off; } // Optional: makes it look cleaner
-}
-
-window-rule {
-    match app-id=r#"^xdg-desktop-portal$"#         
-    open-floating true
-}
-window-rule {
-    match app-id="org.gnome.Portal"
-    match app-id="xdg-desktop-portal-gnome"
-    match app-id="xdg-desktop-portal"
-    open-floating true
-}
-
-window-rule {
-    match app-id=r#"thunar"#
-    default-column-width { fixed 600; }
-}
 window-rule {
     match app-id="zen"
-    match app-id="zed"
+    match app-id="rnote"
+    match app-id="firefox"
+    match app-id="krita"
     open-maximized true
 }
-window-rule {
-    match app-id=r#"zen-browser$"# title="^Picture-in-Picture$"
-    open-floating true
-}
+
 window-rule {
     match app-id=r#"^nwg-look$"#
-    match app-id="io.bassi.Amberol"
     match app-id=r#"^thunar$"#
     match app-id=r#"^xdg-desktop-portal$"#         
     open-floating true
@@ -136,24 +110,24 @@ window-rule {
 
     block-out-from "screen-capture"
 }
+
 window-rule {
-    geometry-corner-radius 20
     clip-to-geometry true
 }
 
 binds {
     // === System & Overview ===
     Mod+Tab repeat=false { toggle-overview; }
-    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Slash { show-hotkey-overlay; }
     Mod+Shift+E { quit; }
 
     // === Application Launchers ===
+    Mod+D { spawn "anyrun"; }
     Mod+T { spawn "foot"; }
-    Mod+A { spawn "/home/aayu/.apps/krita.AppImage"; }
-    Mod+G { spawn "tahoma2d"; }
-    Mod+B cooldown-ms=500 { spawn "zen-browser"; }
+    Mod+P { spawn "pkill" "vibepanel";}
+    Mod+Shift+P { spawn "vibepanel";}
+    Mod+B cooldown-ms=500 { spawn "firefox"; }
     Mod+E { spawn "thunar"; }
-    Mod+SPACE { spawn "anyrun"; }
 
 
     // === Volume ===
@@ -293,16 +267,13 @@ binds {
 
     // === Screenshots ===
     Mod+Shift+S { screenshot; }
-    Ctrl+XF86Launch1 { screenshot-screen; }
-    Alt+XF86Launch1 { screenshot-window; }
-    Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+s { screenshot-window; }
+
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+P { power-off-monitors; }
 }
+
 debug {
     honor-xdg-activation-with-invalid-serial
 }
-
