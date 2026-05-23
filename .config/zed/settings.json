@@ -1,0 +1,19 @@
+{
+  "theme": "Kape Dynamic",
+  "theme_overrides": {
+    "One Dark": {
+      "editor.background": "#181216",
+      "ui.background": "#201a1e",
+      "status_bar.background": "#2f282c",
+      "panel.background": "#201a1e",
+      "tab_bar.background": "#201a1e",
+      "syntax": {
+        "keyword": { "color": "#f4b2e2" },
+        "function": { "color": "#dbbed1" },
+        "string": { "color": "#f5b9a4" },
+        "comment": { "color": "#9b8d95" },
+        "variable": { "color": "#ecdfe5" }
+      }
+    }
+  }
+}

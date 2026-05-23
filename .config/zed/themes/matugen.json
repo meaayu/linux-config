@@ -1,0 +1,23 @@
+{"theme_overrides": {
+    "One Dark":{
+    "background": "#1a1110",
+    "foreground": "#f1dedc",
+    
+    "panel.background": "#231918",
+    "tab.active_background": "#271d1c",
+    "tab.inactive_background": "#1a1110",
+    "status_bar.background": "#322826",
+    
+    "border": "#534341",
+    
+    "syntax": {
+      "keyword": "#ffb4a9",
+      "function": "#e7bdb7",
+      "string": "#dfc38c",
+      "comment": "#a08c89",
+      "type": "#73342c",
+      "variable": "#f1dedc"
+    }
+   }
+  }
+}
