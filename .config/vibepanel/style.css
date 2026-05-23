@@ -1,0 +1,13 @@
+.bar{
+    margin: 0px 150px 10px 150px;
+    padding: 3px 0px 3px 0px;
+    font-size: 15px;
+}
+.workspace-indicator {
+  border-radius: 5px;
+  min-width: 25px;
+}
+.workspace-indicator.active {
+border-radius: 5px;
+  min-width: 40px;
+}
