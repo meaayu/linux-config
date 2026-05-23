@@ -1,0 +1,6 @@
+:root {
+    --background: #{{colors.background}};
+    --on-background: #{{colors.on_background}};
+    --primary: #{{colors.primary}};
+    --on-primary: #{{colors.on_primary}};
+}

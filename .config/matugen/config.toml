@@ -1,0 +1,29 @@
+[config]
+# Sets the overall theme style. Options include: 'tonal_spot', 'vibrant', 'expressive', 'muted', 'neutral'
+variant = 'muted' 
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.foot]
+input_path = '/home/aayu/.config/matugen/templates/foot.ini'
+output_path = '/home/aayu/.config/foot/colors.ini'
+
+[templates.niri]
+input_path = '/home/aayu/.config/matugen/templates/niri.kdl'
+output_path = '/home/aayu/.config/niri/colors.kdl'
+
+[templates.firefox]
+input_path = "/home/aayu/.config/matugen/templates/firefox.css"
+output_path = "/home/aayu/.config/mozilla/firefox/ani9237z.default-release/chrome/colors.css"
+
+[templates.zed]
+input_path = "/home/aayu/.config/matugen/templates/zed.json"
+output_path = "/home/aayu/.config/zed/themes/kape.json"
+
+
+
