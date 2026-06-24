@@ -1,0 +1,346 @@
+[backdrop]
+blur_intensity = 0.0
+enabled = true
+
+[bar]
+order = [ "lefbar" ]
+
+    [bar.lefbar]
+    capsule_radius = 8
+    center = [ "clock", "screen-shot" ]
+    enabled = true
+    end = [ "network", "volume", "brightness", "battery", "session" ]
+    margin_ends = 150
+    position = "left"
+    radius = 15
+    scale = 1.05
+    shadow = false
+    start = [ "control-center", "casc", "workspaces", "Updates" ]
+    thickness = 45
+    widget_spacing = 16
+
+[calendar]
+enabled = true
+refresh_minutes = 240
+
+[control_center]
+sidebar = "full"
+sidebar_section = "none"
+width = 690
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+[desktop_widgets]
+schema_version = 1
+widget_order = [ "desktop-widget-0000000000000001" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 176.0
+    box_width = 320.0
+    cx = 1381.0
+    cy = 780.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background_opacity = 0.0
+        background_radius = 0.0
+        color = "primary"
+
+[dock]
+auto_hide = true
+background_opacity = 0.99999997764825821
+icon_size = 39
+inactive_opacity = 1.0
+inactive_scale = 1.0
+item_spacing = 13
+launcher_icon = "fedora"
+magnification_scale = 2.0
+padding = 3
+pinned = [ "firefox", "foot", "inkscape", "zed", "org.gnome.Nautilus", "org.gnome.Evince", "blender" ]
+position = "right"
+reserve_space = false
+shadow = false
+show_dots = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 0
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 120
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 300
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blur_intensity = 0.5599999874830246
+blurred_desktop = true
+tint_intensity = 0.19999999552965164
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 1
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-0000000000000001" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 24
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 789.0
+    cy = 555.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        show_login_button = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 344.0
+    box_width = 512.0
+    cx = 789.0
+    cy = 248.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background_opacity = 0.0
+        center_text = true
+        clock_style = "digital"
+        color = "primary"
+        font_family = ""
+
+[nightlight]
+enabled = true
+start_time = "20:00"
+stop_time = "07:00"
+temperature_day = 10000
+temperature_night = 9900
+use_weather_location = false
+
+[notification]
+collapse_on_dismiss = false
+
+[osd]
+background_opacity = 0.99999997764825821
+keyboard_layout = false
+lock_keys = false
+offset_x = 30
+offset_y = 30
+position = "bottom_center"
+scale = 1.0500000081956387
+
+[shell]
+avatar_path = "/home/aayu/Documents/logo.png"
+clipboard_history_max_entries = 10
+corner_radius_scale = 1.7500000260770321
+launch_apps_as_systemd_services = true
+niri_overview_type_to_launch_enabled = true
+password_style = "random"
+polkit_agent = true
+settings_show_advanced = true
+show_location = false
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_categories = false
+    launcher_placement = "attached"
+    launcher_session_search = true
+    open_near_click_control_center = true
+    open_near_click_wallpaper = true
+    wallpaper_placement = "centered"
+
+    [shell.screen_corners]
+    size = 43
+
+    [[shell.session.actions]]
+    action = "lock"
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "suspend"
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+    [[shell.session.actions]]
+    action = "command"
+    command = "notify-send 'Noctalia' 'Custom session entry'"
+    enabled = false
+    variant = "default"
+
+    [shell.shadow]
+    alpha = 0.0
+
+[system.monitor]
+enabled = false
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Mine"
+custom_palette = "wallhaven-3q3j6y-mc"
+mode = "dark"
+source = "wallpaper"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "foot", "gtk3", "gtk4", "helix", "kcolorscheme", "niri", "qt" ]
+    community_ids = [ "neovim", "zed", "papirus-icons", "zathura" ]
+
+[wallpaper]
+directory = "/home/aayu/Pictures/wallpapers"
+edge_smoothness = 0.0
+transition_duration = 100
+
+    [wallpaper.default]
+    path = "/home/aayu/Pictures/wallpapers/wallhaven-3qrdr6.jpg"
+
+    [wallpaper.last]
+    path = "/home/aayu/Pictures/wallpapers/wallhaven-3qrdr6.jpg"
+
+    [wallpaper.monitor.eDP-1]
+    fill_color = "on_primary"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/aayu/Pictures/wallpapers/wallhaven-3qrdr6.jpg"
+
+    [[wallpaper.favorite]]
+    path = "/home/aayu/Pictures/wallpapers/wallhaven-mlly98.png"
+    theme_mode = "dark"
+
+[weather]
+refresh_minutes = 55
+
+[widget.Updates]
+command = "foot sudo dnf upgrade -y"
+glyph = "arrow-autofit-up-filled"
+type = "custom_button"
+
+[widget.battery]
+anchor = true
+color = "primary"
+display_mode = "graphic"
+font_weight = 100
+
+[widget.bluetooth]
+scale = 1.1000000000000001
+
+[widget.bongocat]
+anchor = true
+hot_reload = true
+scale = 1.25
+script = "scripts/bongocat.lua"
+type = "scripted"
+
+[widget.brightness]
+color = "primary"
+scale = 1.1000000000000001
+show_label = false
+
+[widget.casc]
+capsule = true
+color = "on_primary"
+font_weight = 300
+length = 10
+type = "spacer"
+
+[widget.clock]
+capsule = true
+capsule_fill = "on_secondary"
+capsule_opacity = 0.59999999999999998
+capsule_radius = 10
+color = "primary"
+scale = 1.1500000000000001
+
+[widget.control-center]
+glyph = "assembly-filled"
+
+[widget.krita]
+command = "krita"
+glyph = "ballpen"
+label = "krita"
+type = "custom_button"
+
+[widget.network]
+color = "primary"
+scale = 1.1499999999999999
+show_label = false
+
+[widget.screen-shot]
+color = "primary"
+command = "niri msg action screenshot"
+glyph = "screenshot"
+type = "custom_button"
+
+[widget.screen_recorder]
+directory = "/home/aayu/Videos"
+quality = "ultra"
+script = "scripts/screen_recorder.lua"
+type = "scripted"
+
+[widget.volume]
+color = "primary"
+scale = 1.1000000000000001
+show_label = false
+
+[widget.workspaces]
+active_pill_size = 2.6000000000000001
+capsule_radius = 5
+display = "none"
+inactive_pill_size = 1.6000000000000001
